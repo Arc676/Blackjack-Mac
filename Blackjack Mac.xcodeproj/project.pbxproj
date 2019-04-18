@@ -14,6 +14,7 @@
 		71A01F9D22684E3500D5AF46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A01F9C22684E3500D5AF46 /* main.m */; };
 		71A01FA622684EA500D5AF46 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 71A01FA522684EA500D5AF46 /* LICENSE */; };
 		71A01FA822684EAE00D5AF46 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 71A01FA722684EAE00D5AF46 /* README.md */; };
+		71A01FAA22685FFA00D5AF46 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 71A01FA922685FF900D5AF46 /* Credits.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		71A01F9E22684E3500D5AF46 /* Blackjack_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blackjack_Mac.entitlements; sourceTree = "<group>"; };
 		71A01FA522684EA500D5AF46 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		71A01FA722684EAE00D5AF46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		71A01FA922685FF900D5AF46 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		71A01F8F22684E2700D5AF46 /* Blackjack Mac */ = {
 			isa = PBXGroup;
 			children = (
+				71A01FA922685FF900D5AF46 /* Credits.rtf */,
 				71A01F9022684E2700D5AF46 /* AppDelegate.h */,
 				71A01F9122684E2700D5AF46 /* AppDelegate.m */,
 				71A01F9322684E2700D5AF46 /* ViewController.h */,
@@ -141,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71A01FAA22685FFA00D5AF46 /* Credits.rtf in Resources */,
 				71A01FA622684EA500D5AF46 /* LICENSE in Resources */,
 				71A01F9722684E3500D5AF46 /* Assets.xcassets in Resources */,
 				71A01FA822684EAE00D5AF46 /* README.md in Resources */,
