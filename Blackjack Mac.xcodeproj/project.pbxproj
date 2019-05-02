@@ -15,6 +15,7 @@
 		71A01FA622684EA500D5AF46 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 71A01FA522684EA500D5AF46 /* LICENSE */; };
 		71A01FA822684EAE00D5AF46 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 71A01FA722684EAE00D5AF46 /* README.md */; };
 		71A01FAA22685FFA00D5AF46 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 71A01FA922685FF900D5AF46 /* Credits.rtf */; };
+		71FCEB14227AC72A00717E3F /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FCEB13227AC72A00717E3F /* CardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		71A01FA522684EA500D5AF46 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		71A01FA722684EAE00D5AF46 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		71A01FA922685FF900D5AF46 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		71FCEB12227AC72A00717E3F /* CardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		71FCEB13227AC72A00717E3F /* CardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				71A01F9B22684E3500D5AF46 /* Info.plist */,
 				71A01F9C22684E3500D5AF46 /* main.m */,
 				71A01F9E22684E3500D5AF46 /* Blackjack_Mac.entitlements */,
+				71FCEB12227AC72A00717E3F /* CardView.h */,
+				71FCEB13227AC72A00717E3F /* CardView.m */,
 			);
 			path = "Blackjack Mac";
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			files = (
 				71A01F9522684E2700D5AF46 /* ViewController.m in Sources */,
 				71A01F9D22684E3500D5AF46 /* main.m in Sources */,
+				71FCEB14227AC72A00717E3F /* CardView.m in Sources */,
 				71A01F9222684E2700D5AF46 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,8 +1,8 @@
 //
-//  ViewController.m
+//  CardView.m
 //  Blackjack Mac
 //
-//  Created by Alessandro Vinciguerra on 2019-04-18.
+//  Created by Alessandro Vinciguerra on 2019-05-02.
 //      <alesvinciguerra@gmail.com>
 //  Copyright (C) 2019 Arc676/Alessandro Vinciguerra
 
@@ -19,28 +19,11 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //  See README and LICENSE for more details
 
-#import "ViewController.h"
+#import "CardView.h"
 
-@implementation ViewController
+@implementation CardView
 
-- (void)viewDidLoad {
+- (void)drawRect:(NSRect)rect {
 }
 
-- (IBAction)beginTurn:(id)sender {
-}
-
-- (IBAction)playerHit:(id)sender {
-}
-
-- (IBAction)playerStand:(id)sender {
-}
-
-- (IBAction)playerDouble:(id)sender {
-}
-
-- (IBAction)playerSplit:(id)sender {
-}
-
-- (IBAction)playerSurrender:(id)sender {
-}
 @end

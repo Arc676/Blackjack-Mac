@@ -20,9 +20,21 @@
 //  See README and LICENSE for more details
 
 #import <Cocoa/Cocoa.h>
+#import "CardView.h"
 
 @interface ViewController : NSViewController
 
+@property (weak) IBOutlet NSTextField *playerName;
+@property (weak) IBOutlet NSTextField *playerWager;
+@property (weak) IBOutlet CardView *dealerHand;
+@property (weak) IBOutlet CardView *playerHand;
+
+- (IBAction)beginTurn:(id)sender;
+
+- (IBAction)playerHit:(id)sender;
+- (IBAction)playerStand:(id)sender;
+- (IBAction)playerDouble:(id)sender;
+- (IBAction)playerSplit:(id)sender;
+- (IBAction)playerSurrender:(id)sender;
 
 @end
-
