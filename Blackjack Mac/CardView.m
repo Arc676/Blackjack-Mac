@@ -24,6 +24,9 @@
 @implementation CardView
 
 - (void)drawRect:(NSRect)rect {
+	if (!self.player) {
+		return;
+	}
 	NSString* text = @"Dealer's hand";
 	if (!self.isDealerHand) {
 		char* name = player_getName(self.player);

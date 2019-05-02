@@ -4,4 +4,4 @@ A Cocoa frontend to the [Rust Blackjack library](https://github.com/Arc676/Black
 
 ## Licensing
 
-Project available under GPLv3. See `LICENSE` for full license text.
+Project available under GPLv3. See `LICENSE` for full license text. See `Credits.rtf` for more information regarding asset licenses.
