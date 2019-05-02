@@ -21,6 +21,16 @@
 
 #import <Cocoa/Cocoa.h>
 
+#include "blackjack.h"
+
 @interface CardView : NSView
+
+@property (assign, readonly) BOOL isDealerHand;
+
+@property (assign) Player* player;
+
+- (void)setIsDealer:(BOOL)isDealer;
+
+- (NSImage*)cardToImage:(unsigned int)cardNo;
 
 @end
