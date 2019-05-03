@@ -21,6 +21,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "CardView.h"
+#import "TableConfig.h"
 
 @interface ViewController : NSViewController
 
@@ -29,7 +30,23 @@
 @property (weak) IBOutlet CardView *dealerHand;
 @property (weak) IBOutlet CardView *playerHand;
 
+@property (weak) IBOutlet NSButton *hitButton;
+@property (weak) IBOutlet NSButton *standButton;
+@property (weak) IBOutlet NSButton *doubleButton;
+@property (weak) IBOutlet NSButton *splitButton;
+@property (weak) IBOutlet NSButton *surrenderButton;
+@property (weak) IBOutlet NSButton *nextButton;
+
+@property (assign) Deck* deck;
+@property (assign) Player** players;
+@property (assign) Player* dealer;
+@property (assign) int playerCount, currentPlayer;
+
+- (void)newGame:(NSNotification*)notif;
+
 - (IBAction)beginTurn:(id)sender;
+- (IBAction)passTurn:(id)sender;
+- (void)setTurnActive:(BOOL)active;
 
 - (IBAction)playerHit:(id)sender;
 - (IBAction)playerStand:(id)sender;

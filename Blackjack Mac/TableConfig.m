@@ -23,6 +23,10 @@
 
 @implementation TableConfig
 
++ (NSNotificationName)newGameNotif {
+	return @"com.arc676.blackjack-mac.newgame";
+}
+
 - (void)viewDidLoad {
 	self.playerNames = [NSMutableArray array];
 	self.playerBalances = [NSMutableArray array];
@@ -48,6 +52,13 @@
 }
 
 - (IBAction)startGame:(id)sender {
+	[NSNotificationCenter.defaultCenter postNotificationName:[TableConfig newGameNotif]
+													  object:self
+													userInfo:@{
+															   @"Decks" : @([self.deckCount integerValue]),
+															   @"Names" : self.playerNames,
+															   @"Balances" : self.playerBalances
+															   }];
 	[self.view.window close];
 }
 

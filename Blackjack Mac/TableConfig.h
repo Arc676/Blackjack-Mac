@@ -36,4 +36,6 @@
 - (IBAction)cancelGame:(id)sender;
 - (IBAction)startGame:(id)sender;
 
++ (NSNotificationName)newGameNotif;
+
 @end

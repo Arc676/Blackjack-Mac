@@ -24,6 +24,8 @@
 @implementation CardView
 
 - (void)drawRect:(NSRect)rect {
+	[[NSColor whiteColor] set];
+	NSRectFill(rect);
 	if (!self.player) {
 		return;
 	}
@@ -39,13 +41,18 @@
 	for (unsigned int ih = 0; ih < handCount; ih++) {
 		Hand* hand = player_getHandWithIndex(self.player, ih);
 		int x = 20;
-		[[NSString stringWithFormat:@"Hand #%d", ih] drawAtPoint:NSMakePoint(x, 60) withAttributes:nil];
+		[[NSString stringWithFormat:@"Hand #%d (%s): %d points",
+		  ih + 1,
+		  (hand_isSet(hand) ? "set" : "playing"),
+		  hand_value(hand)]
+		 drawAtPoint:NSMakePoint(x, 60) withAttributes:nil];
 		unsigned int cardCount = hand_cardCount(hand);
 		for (unsigned int ic = 0; ic < cardCount; ic++) {
 			Card* card = hand_getCardWithIndex(hand, ic);
 			unsigned int cardNo = card_toU32(card);
 			[[self cardToImage:cardNo] drawInRect:NSMakeRect(x, 10, 36, 50)];
 			rust_freecard(card);
+			x += 40;
 		}
 		rust_freehand(hand);
 	}

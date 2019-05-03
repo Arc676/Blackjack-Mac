@@ -647,9 +647,9 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-CN-OQX">
-                                <rect key="frame" x="14" y="13" width="73" height="32"/>
+                                <rect key="frame" x="14" y="13" width="58" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="61" id="CFK-Dh-pHJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="CFK-Dh-pHJ"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Hit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xag-hP-qzO">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -660,7 +660,7 @@ Gw
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Wf-Dn-xmr">
-                                <rect key="frame" x="87" y="13" width="76" height="32"/>
+                                <rect key="frame" x="72" y="13" width="76" height="32"/>
                                 <buttonCell key="cell" type="push" title="Stand" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="irS-VY-Z1f">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -669,20 +669,10 @@ Gw
                                     <action selector="playerStand:" target="XfG-lQ-9wD" id="IxE-3N-t1T"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HVM-mb-wev">
-                                <rect key="frame" x="365" y="13" width="101" height="32"/>
-                                <buttonCell key="cell" type="push" title="Surrender" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3tT-PR-xSi">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="playerSurrender:" target="XfG-lQ-9wD" id="ncB-WJ-HwF"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tac-iE-GmD">
-                                <rect key="frame" x="163" y="13" width="101" height="32"/>
+                                <rect key="frame" x="148" y="13" width="83" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="OXe-JG-4AT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="OXe-JG-4AT"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Double" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ILs-Un-aoj">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -693,9 +683,9 @@ Gw
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4iV-PE-eKa">
-                                <rect key="frame" x="264" y="13" width="101" height="32"/>
+                                <rect key="frame" x="228" y="13" width="68" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="C5d-t7-RHW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="C5d-t7-RHW"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Split" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FH4-gN-emf">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -705,6 +695,9 @@ Gw
                                     <action selector="playerSplit:" target="XfG-lQ-9wD" id="KSS-8b-Evh"/>
                                 </connections>
                             </button>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="1Th-E2-98d" customClass="CardView">
+                                <rect key="frame" x="20" y="168" width="440" height="100"/>
+                            </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xGg-a0-5bi">
                                 <rect key="frame" x="18" y="290" width="42" height="17"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Player" id="8aj-gO-Xkc">
@@ -727,9 +720,26 @@ Gw
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="dae-fW-Uxo" customClass="CardView">
                                 <rect key="frame" x="20" y="61" width="440" height="100"/>
                             </customView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="1Th-E2-98d" customClass="CardView">
-                                <rect key="frame" x="20" y="168" width="440" height="100"/>
-                            </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u8I-pZ-I3j">
+                                <rect key="frame" x="397" y="13" width="69" height="32"/>
+                                <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tuS-KR-wyv">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="passTurn:" target="XfG-lQ-9wD" id="mFR-zQ-YFg"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HVM-mb-wev">
+                                <rect key="frame" x="296" y="13" width="101" height="32"/>
+                                <buttonCell key="cell" type="push" title="Surrender" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3tT-PR-xSi">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="playerSurrender:" target="XfG-lQ-9wD" id="ncB-WJ-HwF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="dae-fW-Uxo" firstAttribute="leading" secondItem="keQ-CN-OQX" secondAttribute="leading" id="1Eb-LX-gdW"/>
@@ -757,17 +767,26 @@ Gw
                             <constraint firstItem="GeC-gf-EWA" firstAttribute="leading" secondItem="Hhv-cd-hZ5" secondAttribute="trailing" constant="8" symbolic="YES" id="pOo-4C-zSp"/>
                             <constraint firstItem="3Wf-Dn-xmr" firstAttribute="leading" secondItem="keQ-CN-OQX" secondAttribute="trailing" constant="12" symbolic="YES" id="q6r-09-BqW"/>
                             <constraint firstItem="3Wf-Dn-xmr" firstAttribute="baseline" secondItem="Tac-iE-GmD" secondAttribute="baseline" id="sOI-r7-GuM"/>
-                            <constraint firstItem="4iV-PE-eKa" firstAttribute="leading" secondItem="Tac-iE-GmD" secondAttribute="trailing" constant="12" symbolic="YES" id="u3c-a5-zzH"/>
+                            <constraint firstItem="4iV-PE-eKa" firstAttribute="leading" secondItem="Tac-iE-GmD" secondAttribute="trailing" constant="9" id="u3c-a5-zzH"/>
                             <constraint firstItem="Hhv-cd-hZ5" firstAttribute="top" secondItem="GeC-gf-EWA" secondAttribute="top" id="uMk-Yl-jDO"/>
-                            <constraint firstItem="dae-fW-Uxo" firstAttribute="trailing" secondItem="HVM-mb-wev" secondAttribute="trailing" id="wyN-2p-35u"/>
+                            <constraint firstAttribute="trailing" secondItem="u8I-pZ-I3j" secondAttribute="trailing" constant="20" id="vxg-1E-14J"/>
+                            <constraint firstItem="u8I-pZ-I3j" firstAttribute="baseline" secondItem="HVM-mb-wev" secondAttribute="baseline" id="wjV-qb-f7b"/>
+                            <constraint firstItem="dae-fW-Uxo" firstAttribute="trailing" secondItem="HVM-mb-wev" secondAttribute="trailing" constant="69" id="wyN-2p-35u"/>
+                            <constraint firstItem="u8I-pZ-I3j" firstAttribute="leading" secondItem="HVM-mb-wev" secondAttribute="trailing" constant="12" symbolic="YES" id="zUO-z6-IZj"/>
                             <constraint firstItem="szI-m5-rpm" firstAttribute="leading" secondItem="Mbm-uK-xpE" secondAttribute="trailing" constant="89" id="zeW-4t-Lcr"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dealerHand" destination="1Th-E2-98d" id="wkz-bf-Due"/>
+                        <outlet property="doubleButton" destination="Tac-iE-GmD" id="ROb-I6-gnc"/>
+                        <outlet property="hitButton" destination="keQ-CN-OQX" id="7p5-3M-EEy"/>
+                        <outlet property="nextButton" destination="u8I-pZ-I3j" id="McS-q2-ODH"/>
                         <outlet property="playerHand" destination="dae-fW-Uxo" id="hss-Wp-GiF"/>
                         <outlet property="playerName" destination="Mbm-uK-xpE" id="3Ub-GN-Jiv"/>
                         <outlet property="playerWager" destination="Hhv-cd-hZ5" id="91a-95-Fu9"/>
+                        <outlet property="splitButton" destination="4iV-PE-eKa" id="a0R-LG-bb7"/>
+                        <outlet property="standButton" destination="3Wf-Dn-xmr" id="rb3-mq-KZF"/>
+                        <outlet property="surrenderButton" destination="HVM-mb-wev" id="9VF-RE-aQy"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
