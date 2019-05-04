@@ -99,6 +99,7 @@
 			Player* player = *pplayer;
 			player_gameOver(player, dealerValue);
 		}
+		[self.playerTable reloadData];
 	} else {
 		self.playerHand.player = NULL;
 		[self.playerHand setNeedsDisplay:YES];
@@ -116,6 +117,7 @@
 - (IBAction)playerStand:(id)sender {
 	Player* player = self.players[self.currentPlayer];
 	player_stand(player);
+	[self.playerHand setNeedsDisplay:YES];
 	if (!player_isPlaying(player)) {
 		[self setTurnActive:NO];
 	}
@@ -140,6 +142,24 @@
 	if (!player_isPlaying(player)) {
 		[self setTurnActive:NO];
 	}
+}
+
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+	Player* player = self.players[row];
+	if ([tableColumn.title isEqualToString:@"Player"]) {
+		char* name = player_getName(player);
+		NSString* nsname = [NSString stringWithUTF8String:name];
+		rust_freestr(name);
+		return nsname;
+	} else if ([tableColumn.title isEqualToString:@"Balance"]) {
+		return @(player_getBalance(player));
+	} else {
+		return @(player_getStanding(player));
+	}
+}
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+	return self.playerCount;
 }
 
 @end

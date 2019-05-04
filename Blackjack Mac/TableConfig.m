@@ -35,6 +35,8 @@
 - (IBAction)addPlayer:(id)sender {
 	[self.playerNames addObject:[self.playerName stringValue]];
 	[self.playerBalances addObject:@([self.playerBalance intValue])];
+	[self.playerName setStringValue:@""];
+	[self.playerBalance setStringValue:@""];
 	[self.playerTable reloadData];
 }
 

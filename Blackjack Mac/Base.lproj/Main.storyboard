@@ -375,7 +375,7 @@
                 </windowController>
                 <customObject id="zd0-dd-oxa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615" y="220"/>
+            <point key="canvasLocation" x="713" y="176"/>
         </scene>
         <!--Table Config-->
         <scene sceneID="jnb-p2-Ppa">
@@ -597,7 +597,7 @@ Gw
                     <window key="window" title="Blackjack" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="712" height="329"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
@@ -616,7 +616,7 @@ Gw
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="329"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="329"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GeC-gf-EWA">
@@ -648,12 +648,10 @@ Gw
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-CN-OQX">
                                 <rect key="frame" x="14" y="13" width="58" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="CFK-Dh-pHJ"/>
-                                </constraints>
                                 <buttonCell key="cell" type="push" title="Hit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xag-hP-qzO">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">h</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="playerHit:" target="XfG-lQ-9wD" id="kgq-Lp-wo0"/>
@@ -664,6 +662,7 @@ Gw
                                 <buttonCell key="cell" type="push" title="Stand" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="irS-VY-Z1f">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">s</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="playerStand:" target="XfG-lQ-9wD" id="IxE-3N-t1T"/>
@@ -671,12 +670,10 @@ Gw
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tac-iE-GmD">
                                 <rect key="frame" x="148" y="13" width="83" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="OXe-JG-4AT"/>
-                                </constraints>
                                 <buttonCell key="cell" type="push" title="Double" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ILs-Un-aoj">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">d</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="playerDouble:" target="XfG-lQ-9wD" id="k8J-ZX-0RK"/>
@@ -684,12 +681,10 @@ Gw
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4iV-PE-eKa">
                                 <rect key="frame" x="228" y="13" width="68" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="C5d-t7-RHW"/>
-                                </constraints>
                                 <buttonCell key="cell" type="push" title="Split" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FH4-gN-emf">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">v</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="playerSplit:" target="XfG-lQ-9wD" id="KSS-8b-Evh"/>
@@ -708,9 +703,6 @@ Gw
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mbm-uK-xpE">
                                 <rect key="frame" x="66" y="287" width="96" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="BV9-eG-ZsZ"/>
-                                </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="9pJ-sA-Nhs">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -725,6 +717,9 @@ Gw
                                 <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tuS-KR-wyv">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+IA
+</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="passTurn:" target="XfG-lQ-9wD" id="mFR-zQ-YFg"/>
@@ -735,45 +730,123 @@ Gw
                                 <buttonCell key="cell" type="push" title="Surrender" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3tT-PR-xSi">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent">x</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="playerSurrender:" target="XfG-lQ-9wD" id="ncB-WJ-HwF"/>
                                 </connections>
                             </button>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mm-3o-0qe">
+                                <rect key="frame" x="468" y="20" width="224" height="289"/>
+                                <clipView key="contentView" id="N4c-KS-1a5">
+                                    <rect key="frame" x="1" y="0.0" width="222" height="288"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="AYF-YV-N8E" id="A9U-TR-qbM">
+                                            <rect key="frame" x="0.0" y="0.0" width="222" height="265"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn width="85" minWidth="40" maxWidth="1000" id="pbA-5P-yf8">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Player">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="Wqa-80-qEi">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                                <tableColumn width="69" minWidth="40" maxWidth="1000" id="rK3-Ph-t3K">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Balance">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="9xu-Tv-fGa">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                                <tableColumn width="59" minWidth="10" maxWidth="3.4028234663852886e+38" id="qa5-I5-boc">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Standing">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="YJU-LM-agg">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="02D-by-3c9"/>
+                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="lgJ-IM-wBQ"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="nBQ-7M-jVk">
+                                    <rect key="frame" x="1" y="273" width="222" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="vsa-bj-NRc">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <tableHeaderView key="headerView" id="AYF-YV-N8E">
+                                    <rect key="frame" x="0.0" y="0.0" width="222" height="23"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableHeaderView>
+                            </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="dae-fW-Uxo" firstAttribute="leading" secondItem="keQ-CN-OQX" secondAttribute="leading" id="1Eb-LX-gdW"/>
-                            <constraint firstAttribute="bottom" secondItem="keQ-CN-OQX" secondAttribute="bottom" constant="20" symbolic="YES" id="1zC-tn-7GX"/>
-                            <constraint firstItem="szI-m5-rpm" firstAttribute="baseline" secondItem="Hhv-cd-hZ5" secondAttribute="baseline" id="3Xg-rG-WIb"/>
-                            <constraint firstItem="keQ-CN-OQX" firstAttribute="top" secondItem="dae-fW-Uxo" secondAttribute="bottom" constant="20" symbolic="YES" id="5tb-hH-jCA"/>
-                            <constraint firstItem="xGg-a0-5bi" firstAttribute="leading" secondItem="1Th-E2-98d" secondAttribute="leading" id="7Tp-cU-J18"/>
-                            <constraint firstItem="Hhv-cd-hZ5" firstAttribute="leading" secondItem="szI-m5-rpm" secondAttribute="trailing" constant="8" symbolic="YES" id="86c-kP-Hss"/>
-                            <constraint firstItem="keQ-CN-OQX" firstAttribute="baseline" secondItem="3Wf-Dn-xmr" secondAttribute="baseline" id="ADx-sp-uH3"/>
-                            <constraint firstItem="1Th-E2-98d" firstAttribute="trailing" secondItem="dae-fW-Uxo" secondAttribute="trailing" id="C7L-0S-5rO"/>
-                            <constraint firstItem="1Th-E2-98d" firstAttribute="top" secondItem="GeC-gf-EWA" secondAttribute="bottom" constant="20" symbolic="YES" id="EpR-lX-atw"/>
-                            <constraint firstItem="Mbm-uK-xpE" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="Jq5-1l-b58"/>
-                            <constraint firstItem="GeC-gf-EWA" firstAttribute="trailing" secondItem="1Th-E2-98d" secondAttribute="trailing" id="OcY-qS-ZL8"/>
-                            <constraint firstItem="HVM-mb-wev" firstAttribute="leading" secondItem="4iV-PE-eKa" secondAttribute="trailing" constant="12" symbolic="YES" id="PYG-29-yii"/>
-                            <constraint firstItem="Mbm-uK-xpE" firstAttribute="baseline" secondItem="szI-m5-rpm" secondAttribute="baseline" id="ZUK-f2-eDX"/>
-                            <constraint firstItem="Tac-iE-GmD" firstAttribute="leading" secondItem="3Wf-Dn-xmr" secondAttribute="trailing" constant="12" symbolic="YES" id="aYD-Vq-3YY"/>
-                            <constraint firstItem="4iV-PE-eKa" firstAttribute="baseline" secondItem="HVM-mb-wev" secondAttribute="baseline" id="bUK-Wm-fiQ"/>
-                            <constraint firstItem="xGg-a0-5bi" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="cuy-Nc-TJX"/>
-                            <constraint firstItem="xGg-a0-5bi" firstAttribute="baseline" secondItem="Mbm-uK-xpE" secondAttribute="baseline" id="eDS-vU-QbX"/>
-                            <constraint firstItem="1Th-E2-98d" firstAttribute="leading" secondItem="dae-fW-Uxo" secondAttribute="leading" id="fIw-65-36e"/>
-                            <constraint firstItem="dae-fW-Uxo" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="168" id="fLd-p3-8q4"/>
-                            <constraint firstItem="dae-fW-Uxo" firstAttribute="top" secondItem="1Th-E2-98d" secondAttribute="bottom" constant="7" id="jWo-b0-Rff"/>
-                            <constraint firstItem="Mbm-uK-xpE" firstAttribute="leading" secondItem="xGg-a0-5bi" secondAttribute="trailing" constant="8" symbolic="YES" id="kik-kZ-a3W"/>
-                            <constraint firstItem="Tac-iE-GmD" firstAttribute="baseline" secondItem="4iV-PE-eKa" secondAttribute="baseline" id="pL4-Dt-sG8"/>
-                            <constraint firstItem="GeC-gf-EWA" firstAttribute="leading" secondItem="Hhv-cd-hZ5" secondAttribute="trailing" constant="8" symbolic="YES" id="pOo-4C-zSp"/>
-                            <constraint firstItem="3Wf-Dn-xmr" firstAttribute="leading" secondItem="keQ-CN-OQX" secondAttribute="trailing" constant="12" symbolic="YES" id="q6r-09-BqW"/>
-                            <constraint firstItem="3Wf-Dn-xmr" firstAttribute="baseline" secondItem="Tac-iE-GmD" secondAttribute="baseline" id="sOI-r7-GuM"/>
-                            <constraint firstItem="4iV-PE-eKa" firstAttribute="leading" secondItem="Tac-iE-GmD" secondAttribute="trailing" constant="9" id="u3c-a5-zzH"/>
-                            <constraint firstItem="Hhv-cd-hZ5" firstAttribute="top" secondItem="GeC-gf-EWA" secondAttribute="top" id="uMk-Yl-jDO"/>
-                            <constraint firstAttribute="trailing" secondItem="u8I-pZ-I3j" secondAttribute="trailing" constant="20" id="vxg-1E-14J"/>
-                            <constraint firstItem="u8I-pZ-I3j" firstAttribute="baseline" secondItem="HVM-mb-wev" secondAttribute="baseline" id="wjV-qb-f7b"/>
-                            <constraint firstItem="dae-fW-Uxo" firstAttribute="trailing" secondItem="HVM-mb-wev" secondAttribute="trailing" constant="69" id="wyN-2p-35u"/>
-                            <constraint firstItem="u8I-pZ-I3j" firstAttribute="leading" secondItem="HVM-mb-wev" secondAttribute="trailing" constant="12" symbolic="YES" id="zUO-z6-IZj"/>
-                            <constraint firstItem="szI-m5-rpm" firstAttribute="leading" secondItem="Mbm-uK-xpE" secondAttribute="trailing" constant="89" id="zeW-4t-Lcr"/>
+                            <constraint firstAttribute="bottom" secondItem="keQ-CN-OQX" secondAttribute="bottom" constant="20" symbolic="YES" id="0N2-N7-8UV"/>
+                            <constraint firstItem="4iV-PE-eKa" firstAttribute="leading" secondItem="Tac-iE-GmD" secondAttribute="trailing" constant="9" id="0TF-7P-txQ"/>
+                            <constraint firstItem="HVM-mb-wev" firstAttribute="baseline" secondItem="u8I-pZ-I3j" secondAttribute="baseline" id="4dX-FP-ziu"/>
+                            <constraint firstItem="u8I-pZ-I3j" firstAttribute="leading" secondItem="HVM-mb-wev" secondAttribute="trailing" constant="12" symbolic="YES" id="4fQ-vQ-Pjc"/>
+                            <constraint firstItem="dae-fW-Uxo" firstAttribute="leading" secondItem="keQ-CN-OQX" secondAttribute="leading" id="5vH-Ay-ZRG"/>
+                            <constraint firstItem="3Wf-Dn-xmr" firstAttribute="baseline" secondItem="Tac-iE-GmD" secondAttribute="baseline" id="8Gu-uv-ZyT"/>
+                            <constraint firstAttribute="trailing" secondItem="4Mm-3o-0qe" secondAttribute="trailing" constant="20" symbolic="YES" id="BpT-sj-TDG"/>
+                            <constraint firstItem="4iV-PE-eKa" firstAttribute="baseline" secondItem="HVM-mb-wev" secondAttribute="baseline" id="Fe1-Rc-34A"/>
+                            <constraint firstItem="keQ-CN-OQX" firstAttribute="top" secondItem="dae-fW-Uxo" secondAttribute="bottom" constant="20" symbolic="YES" id="GZd-Hb-fUN"/>
+                            <constraint firstItem="dae-fW-Uxo" firstAttribute="top" secondItem="1Th-E2-98d" secondAttribute="bottom" constant="7" id="GwI-br-q6l"/>
+                            <constraint firstItem="GeC-gf-EWA" firstAttribute="leading" secondItem="Hhv-cd-hZ5" secondAttribute="trailing" constant="8" symbolic="YES" id="H6t-jc-XJn"/>
+                            <constraint firstItem="Hhv-cd-hZ5" firstAttribute="top" secondItem="GeC-gf-EWA" secondAttribute="top" id="Itd-3p-T19"/>
+                            <constraint firstItem="Hhv-cd-hZ5" firstAttribute="leading" secondItem="szI-m5-rpm" secondAttribute="trailing" constant="8" symbolic="YES" id="LLJ-bz-Pzk"/>
+                            <constraint firstItem="szI-m5-rpm" firstAttribute="baseline" secondItem="Hhv-cd-hZ5" secondAttribute="baseline" id="M3x-MA-fCx"/>
+                            <constraint firstItem="Mbm-uK-xpE" firstAttribute="leading" secondItem="xGg-a0-5bi" secondAttribute="trailing" constant="8" symbolic="YES" id="NLI-z9-n14"/>
+                            <constraint firstItem="keQ-CN-OQX" firstAttribute="baseline" secondItem="3Wf-Dn-xmr" secondAttribute="baseline" id="Nid-Y6-ckE"/>
+                            <constraint firstItem="4Mm-3o-0qe" firstAttribute="leading" secondItem="1Th-E2-98d" secondAttribute="trailing" constant="8" symbolic="YES" id="Q7E-Xg-3rw"/>
+                            <constraint firstItem="dae-fW-Uxo" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="168" id="QY5-EG-XlP"/>
+                            <constraint firstItem="4Mm-3o-0qe" firstAttribute="leading" secondItem="dae-fW-Uxo" secondAttribute="trailing" constant="8" symbolic="YES" id="S8W-SQ-Jxj"/>
+                            <constraint firstItem="Tac-iE-GmD" firstAttribute="leading" secondItem="3Wf-Dn-xmr" secondAttribute="trailing" constant="12" symbolic="YES" id="Vbw-r6-ObL"/>
+                            <constraint firstItem="szI-m5-rpm" firstAttribute="leading" secondItem="Mbm-uK-xpE" secondAttribute="trailing" constant="89" id="XPI-6e-FTq"/>
+                            <constraint firstItem="GeC-gf-EWA" firstAttribute="top" secondItem="4Mm-3o-0qe" secondAttribute="top" id="arO-aF-Ph5"/>
+                            <constraint firstItem="3Wf-Dn-xmr" firstAttribute="leading" secondItem="keQ-CN-OQX" secondAttribute="trailing" constant="12" symbolic="YES" id="cNg-Ed-ITL"/>
+                            <constraint firstItem="xGg-a0-5bi" firstAttribute="leading" secondItem="1Th-E2-98d" secondAttribute="leading" id="eY3-6r-ZLW"/>
+                            <constraint firstItem="4Mm-3o-0qe" firstAttribute="leading" secondItem="GeC-gf-EWA" secondAttribute="trailing" constant="8" symbolic="YES" id="g94-i7-GKv"/>
+                            <constraint firstItem="1Th-E2-98d" firstAttribute="top" secondItem="GeC-gf-EWA" secondAttribute="bottom" constant="20" symbolic="YES" id="gpZ-EJ-y6Q"/>
+                            <constraint firstItem="1Th-E2-98d" firstAttribute="leading" secondItem="dae-fW-Uxo" secondAttribute="leading" id="h6w-vv-q1b"/>
+                            <constraint firstItem="4Mm-3o-0qe" firstAttribute="leading" secondItem="u8I-pZ-I3j" secondAttribute="trailing" constant="8" symbolic="YES" id="ila-BS-DxH"/>
+                            <constraint firstItem="xGg-a0-5bi" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="kAi-OE-hKp"/>
+                            <constraint firstItem="Mbm-uK-xpE" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="mTn-kT-x8U"/>
+                            <constraint firstItem="xGg-a0-5bi" firstAttribute="baseline" secondItem="Mbm-uK-xpE" secondAttribute="baseline" id="nfF-wn-ZEg"/>
+                            <constraint firstItem="Mbm-uK-xpE" firstAttribute="baseline" secondItem="szI-m5-rpm" secondAttribute="baseline" id="rp9-uu-SEi"/>
+                            <constraint firstItem="Hhv-cd-hZ5" firstAttribute="leading" secondItem="HVM-mb-wev" secondAttribute="leading" id="sJu-3U-k8L"/>
+                            <constraint firstItem="Tac-iE-GmD" firstAttribute="baseline" secondItem="4iV-PE-eKa" secondAttribute="baseline" id="tK8-QH-vN7"/>
+                            <constraint firstItem="HVM-mb-wev" firstAttribute="leading" secondItem="4iV-PE-eKa" secondAttribute="trailing" constant="12" symbolic="YES" id="td4-xH-6gX"/>
+                            <constraint firstItem="u8I-pZ-I3j" firstAttribute="bottom" secondItem="4Mm-3o-0qe" secondAttribute="bottom" id="xLz-dJ-Mb6"/>
                         </constraints>
                     </view>
                     <connections>
@@ -783,6 +856,7 @@ Gw
                         <outlet property="nextButton" destination="u8I-pZ-I3j" id="McS-q2-ODH"/>
                         <outlet property="playerHand" destination="dae-fW-Uxo" id="hss-Wp-GiF"/>
                         <outlet property="playerName" destination="Mbm-uK-xpE" id="3Ub-GN-Jiv"/>
+                        <outlet property="playerTable" destination="A9U-TR-qbM" id="z6l-d2-jjb"/>
                         <outlet property="playerWager" destination="Hhv-cd-hZ5" id="91a-95-Fu9"/>
                         <outlet property="splitButton" destination="4iV-PE-eKa" id="a0R-LG-bb7"/>
                         <outlet property="standButton" destination="3Wf-Dn-xmr" id="rb3-mq-KZF"/>
@@ -791,7 +865,7 @@ Gw
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="684.5"/>
+            <point key="canvasLocation" x="75" y="777"/>
         </scene>
     </scenes>
 </document>

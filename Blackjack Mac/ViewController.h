@@ -23,12 +23,13 @@
 #import "CardView.h"
 #import "TableConfig.h"
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
 @property (weak) IBOutlet NSTextField *playerName;
 @property (weak) IBOutlet NSTextField *playerWager;
 @property (weak) IBOutlet CardView *dealerHand;
 @property (weak) IBOutlet CardView *playerHand;
+@property (weak) IBOutlet NSTableView *playerTable;
 
 @property (weak) IBOutlet NSButton *hitButton;
 @property (weak) IBOutlet NSButton *standButton;
