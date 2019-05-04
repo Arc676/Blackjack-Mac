@@ -64,10 +64,16 @@
 		sprintf(name, "%s", [names[i] cStringUsingEncoding:NSUTF8StringEncoding]);
 		self.players[i] = player_new(name, 0, [balances[i] intValue]);
 	}
-	player_bet(self.dealer, 0, self.deck);
+	[self.playerName setStringValue:names[0]];
+	[self.playerTable reloadData];
 }
 
 - (IBAction)beginTurn:(id)sender {
+	if (self.currentPlayer == 0) {
+		player_gameOver(self.dealer, 0);
+		player_bet(self.dealer, 0, self.deck);
+		deck_reset(self.deck);
+	}
 	self.dealerHand.player = NULL;
 	[self.dealerHand setNeedsDisplay:YES];
 
@@ -105,10 +111,15 @@
 		[self.playerHand setNeedsDisplay:YES];
 		[self setTurnActive:YES];
 	}
+	char* name = player_getName(self.players[self.currentPlayer]);
+	[self.playerName setStringValue:[NSString stringWithUTF8String:name]];
+	rust_freestr(name);
 }
 
 - (IBAction)playerHit:(id)sender {
-	if (player_hit(self.players[self.currentPlayer], self.deck)) {
+	Player* player = self.players[self.currentPlayer];
+	player_hit(player, self.deck);
+	if (!player_isPlaying(player)) {
 		[self setTurnActive:NO];
 	}
 	[self.playerHand setNeedsDisplay:YES];
@@ -124,9 +135,12 @@
 }
 
 - (IBAction)playerDouble:(id)sender {
-	player_double(self.players[self.currentPlayer], self.deck);
+	Player* player = self.players[self.currentPlayer];
+	player_double(player, self.deck);
 	[self.playerHand setNeedsDisplay:YES];
-	[self setTurnActive:NO];
+	if (!player_isPlaying(player)) {
+		[self setTurnActive:NO];
+	}
 }
 
 - (IBAction)playerSplit:(id)sender {
@@ -139,6 +153,7 @@
 - (IBAction)playerSurrender:(id)sender {
 	Player* player = self.players[self.currentPlayer];
 	player_surrender(player);
+	[self.playerHand setNeedsDisplay:YES];
 	if (!player_isPlaying(player)) {
 		[self setTurnActive:NO];
 	}

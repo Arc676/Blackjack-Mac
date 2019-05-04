@@ -38,9 +38,12 @@
 	[text drawAtPoint:NSMakePoint(10, 80) withAttributes:nil];
 
 	unsigned int handCount = player_handCount(self.player);
+	int x = 20;
 	for (unsigned int ih = 0; ih < handCount; ih++) {
+		if (x != 20) {
+			x += 80;
+		}
 		Hand* hand = player_getHandWithIndex(self.player, ih);
-		int x = 20;
 		[[NSString stringWithFormat:@"Hand #%d (%s): %d points",
 		  ih + 1,
 		  (hand_isSet(hand) ? "set" : "playing"),
