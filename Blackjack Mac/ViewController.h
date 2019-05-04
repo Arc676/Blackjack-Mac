@@ -43,6 +43,8 @@
 @property (assign) Player* dealer;
 @property (assign) int playerCount, currentPlayer;
 
+@property (retain) NSAlert *cannotSplit;
+
 - (void)newGame:(NSNotification*)notif;
 
 - (IBAction)beginTurn:(id)sender;

@@ -12,6 +12,7 @@ S - Stand
 X - Surrender
 V - Split
 Space - Continue (after your turn ends)
+P - Confirm wager and begin round
 
 ## Licensing
 

@@ -28,6 +28,11 @@
 										   selector:@selector(newGame:)
 											   name:[TableConfig newGameNotif]
 											 object:nil];
+
+	self.cannotSplit = [[NSAlert alloc] init];
+	self.cannotSplit.messageText = @"Illegal action";
+	self.cannotSplit.informativeText = @"Cannot split this hand";
+
 	char* dealerName = malloc(7);
 	sprintf(dealerName, "Dealer");
 	self.dealer = player_new(dealerName, 1, -1);
@@ -147,6 +152,7 @@
 	if (player_split(self.players[self.currentPlayer], self.deck)) {
 		[self.playerHand setNeedsDisplay:YES];
 	} else {
+		[self.cannotSplit runModal];
 	}
 }
 

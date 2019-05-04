@@ -34,7 +34,11 @@
 
 - (IBAction)addPlayer:(id)sender {
 	[self.playerNames addObject:[self.playerName stringValue]];
-	[self.playerBalances addObject:@([self.playerBalance intValue])];
+	int balance = [self.playerBalance intValue];
+	if (balance <= 0) {
+		balance = 1000;
+	}
+	[self.playerBalances addObject:@(balance)];
 	[self.playerName setStringValue:@""];
 	[self.playerBalance setStringValue:@""];
 	[self.playerTable reloadData];
@@ -42,7 +46,7 @@
 
 - (IBAction)removeSelectedPlayer:(id)sender {
 	int idx = (int)[self.playerTable selectedRow];
-	if (idx > 0) {
+	if (idx >= 0) {
 		[self.playerNames removeObjectAtIndex:idx];
 		[self.playerBalances removeObjectAtIndex:idx];
 		[self.playerTable reloadData];
@@ -54,10 +58,17 @@
 }
 
 - (IBAction)startGame:(id)sender {
+	if (self.playerNames.count < 1) {
+		return;
+	}
+	int deckCount = [self.deckCount intValue];
+	if (deckCount <= 0) {
+		deckCount = 1;
+	}
 	[NSNotificationCenter.defaultCenter postNotificationName:[TableConfig newGameNotif]
 													  object:self
 													userInfo:@{
-															   @"Decks" : @([self.deckCount integerValue]),
+															   @"Decks" : @(deckCount),
 															   @"Names" : self.playerNames,
 															   @"Balances" : self.playerBalances
 															   }];
