@@ -29,13 +29,9 @@
 	if (!self.player) {
 		return;
 	}
-	NSString* text = @"Dealer's hand";
-	if (!self.isDealerHand) {
-		char* name = player_getName(self.player);
-		text = [NSString stringWithFormat:@"%s's hand", name];
-		rust_freestr(name);
-	}
-	[text drawAtPoint:NSMakePoint(10, 80) withAttributes:nil];
+	char* name = player_getName(self.player);
+	[[NSString stringWithFormat:@"%s's hand", name] drawAtPoint:NSMakePoint(10, 80) withAttributes:nil];
+	rust_freestr(name);
 
 	unsigned int handCount = player_handCount(self.player);
 	int x = 20;
@@ -59,11 +55,6 @@
 		}
 		rust_freehand(hand);
 	}
-}
-
-- (void)setIsDealer:(BOOL)isDealer {
-	_isDealerHand = isDealer;
-	[self setNeedsDisplay:YES];
 }
 
 - (NSImage *)cardToImage:(unsigned int)cardNo {

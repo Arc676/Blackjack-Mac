@@ -111,6 +111,7 @@
 			player_gameOver(player, dealerValue);
 		}
 		[self.playerTable reloadData];
+		[self.nextButton setEnabled:NO];
 	} else {
 		self.playerHand.player = NULL;
 		[self.playerHand setNeedsDisplay:YES];

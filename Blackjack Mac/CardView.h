@@ -29,8 +29,6 @@
 
 @property (assign) Player* player;
 
-- (void)setIsDealer:(BOOL)isDealer;
-
 - (NSImage*)cardToImage:(unsigned int)cardNo;
 
 @end
