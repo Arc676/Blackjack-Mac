@@ -12,8 +12,6 @@
 		71A01F9722684E3500D5AF46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71A01F9622684E3500D5AF46 /* Assets.xcassets */; };
 		71A01F9A22684E3500D5AF46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71A01F9822684E3500D5AF46 /* Main.storyboard */; };
 		71A01F9D22684E3500D5AF46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A01F9C22684E3500D5AF46 /* main.m */; };
-		71A01FA622684EA500D5AF46 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 71A01FA522684EA500D5AF46 /* LICENSE */; };
-		71A01FA822684EAE00D5AF46 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 71A01FA722684EAE00D5AF46 /* README.md */; };
 		71A01FAA22685FFA00D5AF46 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 71A01FA922685FF900D5AF46 /* Credits.rtf */; };
 		71FCEB14227AC72A00717E3F /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FCEB13227AC72A00717E3F /* CardView.m */; };
 		71FCEB18227B166F00717E3F /* libblackjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FCEB17227B166F00717E3F /* libblackjack.a */; };
@@ -413,7 +411,6 @@
 				71FCEBAF227B233D00717E3F /* h02.png in Resources */,
 				71FCEBBF227B233D00717E3F /* s05.png in Resources */,
 				71FCEBB0227B233D00717E3F /* h03.png in Resources */,
-				71A01FA622684EA500D5AF46 /* LICENSE in Resources */,
 				71A01F9722684E3500D5AF46 /* Assets.xcassets in Resources */,
 				71FCEB9B227B233D00717E3F /* c08.png in Resources */,
 				71FCEBBE227B233D00717E3F /* s04.png in Resources */,
@@ -446,7 +443,6 @@
 				71FCEB93227B233D00717E3F /* Card-Back-06.png in Resources */,
 				71FCEBC1227B233D00717E3F /* s07.png in Resources */,
 				71FCEB91227B233D00717E3F /* Card-Back-04.png in Resources */,
-				71A01FA822684EAE00D5AF46 /* README.md in Resources */,
 				71FCEB9F227B233D00717E3F /* c12.png in Resources */,
 				71FCEB97227B233D00717E3F /* c04.png in Resources */,
 				71A01F9A22684E3500D5AF46 /* Main.storyboard in Resources */,
