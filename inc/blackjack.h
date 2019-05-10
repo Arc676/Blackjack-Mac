@@ -94,8 +94,9 @@ extern void player_stand(Player* player);
 /**
  * Surrender the current hand
  * @param player The active player
+ * @return Whether the current hand can be surrendered
  */
-extern void player_surrender(Player* player);
+extern int player_surrender(Player* player);
 
 /**
  * Split the player's hand
@@ -156,6 +157,20 @@ extern unsigned int player_handCount(Player* player);
  * @return The desired hand
  */
 extern Hand* player_getHandWithIndex(Player* player, unsigned int idx);
+
+/**
+ * Determine whether a player can surrender their currently active hand
+ * @param player The player to check
+ * @return Whether the currently active hand can be surrendered
+ */
+extern int player_canSurrenderCurrentHand(Player* player);
+
+/**
+ * Determine whether a player can split their currently active hand
+ * @param player The player to check
+ * @return Whether the currently active hand can be split
+ */
+extern int player_canSplitHand(Player* player);
 
 /**
  * Get the number of cards in a hand

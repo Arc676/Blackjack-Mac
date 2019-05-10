@@ -29,10 +29,6 @@
 											   name:[TableConfig newGameNotif]
 											 object:nil];
 
-	self.cannotSplit = [[NSAlert alloc] init];
-	self.cannotSplit.messageText = @"Illegal action";
-	self.cannotSplit.informativeText = @"Cannot split this hand";
-
 	char* dealerName = malloc(7);
 	sprintf(dealerName, "Dealer");
 	self.dealer = player_new(dealerName, 1, -1);
@@ -46,6 +42,12 @@
 	[self.splitButton setEnabled:active];
 	[self.surrenderButton setEnabled:active];
 	[self.nextButton setEnabled:!active];
+}
+
+- (void)updateAvailableControls {
+	Player* player = self.players[self.currentPlayer];
+	[self.surrenderButton setEnabled:player_canSurrenderCurrentHand(player)];
+	[self.splitButton setEnabled:player_canSplitHand(player)];
 }
 
 - (void)newGame:(NSNotification *)notif {
@@ -88,6 +90,7 @@
 	self.playerHand.player = player;
 	[self.playerHand setNeedsDisplay:YES];
 	[self setTurnActive:YES];
+	[self updateAvailableControls];
 }
 
 - (IBAction)passTurn:(id)sender {
@@ -125,7 +128,9 @@
 - (IBAction)playerHit:(id)sender {
 	Player* player = self.players[self.currentPlayer];
 	player_hit(player, self.deck);
-	if (!player_isPlaying(player)) {
+	if (player_isPlaying(player)) {
+		[self updateAvailableControls];
+	} else {
 		[self setTurnActive:NO];
 	}
 	[self.playerHand setNeedsDisplay:YES];
@@ -135,7 +140,9 @@
 	Player* player = self.players[self.currentPlayer];
 	player_stand(player);
 	[self.playerHand setNeedsDisplay:YES];
-	if (!player_isPlaying(player)) {
+	if (player_isPlaying(player)) {
+		[self updateAvailableControls];
+	} else {
 		[self setTurnActive:NO];
 	}
 }
@@ -144,16 +151,17 @@
 	Player* player = self.players[self.currentPlayer];
 	player_double(player, self.deck);
 	[self.playerHand setNeedsDisplay:YES];
-	if (!player_isPlaying(player)) {
+	if (player_isPlaying(player)) {
+		[self updateAvailableControls];
+	} else {
 		[self setTurnActive:NO];
 	}
 }
 
 - (IBAction)playerSplit:(id)sender {
 	if (player_split(self.players[self.currentPlayer], self.deck)) {
+		[self updateAvailableControls];
 		[self.playerHand setNeedsDisplay:YES];
-	} else {
-		[self.cannotSplit runModal];
 	}
 }
 
@@ -161,7 +169,9 @@
 	Player* player = self.players[self.currentPlayer];
 	player_surrender(player);
 	[self.playerHand setNeedsDisplay:YES];
-	if (!player_isPlaying(player)) {
+	if (player_isPlaying(player)) {
+		[self updateAvailableControls];
+	} else {
 		[self setTurnActive:NO];
 	}
 }
