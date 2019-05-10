@@ -60,7 +60,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="File" id="bib-Uj-vzu">
                                     <items>
-                                        <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
+                                        <menuItem title="New Game..." keyEquivalent="n" id="Was-JA-tGl">
                                             <connections>
                                                 <action selector="newDocument:" target="Ady-hI-5gd" id="4Si-XN-c54"/>
                                                 <segue destination="zf1-14-sfJ" kind="show" id="qq9-C6-FWa"/>
@@ -620,8 +620,8 @@ Gw
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GeC-gf-EWA">
-                                <rect key="frame" x="400" y="281" width="66" height="32"/>
-                                <buttonCell key="cell" type="push" title="Play" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Apv-bl-tih">
+                                <rect key="frame" x="405" y="281" width="61" height="32"/>
+                                <buttonCell key="cell" type="push" title="Bet" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Apv-bl-tih">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent">p</string>
@@ -639,7 +639,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hhv-cd-hZ5">
-                                <rect key="frame" x="302" y="287" width="96" height="22"/>
+                                <rect key="frame" x="302" y="287" width="101" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Q3J-rD-sFO">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="sBL-PG-t2d"/>
                                     <font key="font" metaFont="system"/>
@@ -649,7 +649,7 @@ Gw
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-CN-OQX">
                                 <rect key="frame" x="14" y="13" width="58" height="32"/>
-                                <buttonCell key="cell" type="push" title="Hit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xag-hP-qzO">
+                                <buttonCell key="cell" type="push" title="Hit" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xag-hP-qzO">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent">h</string>
@@ -660,7 +660,7 @@ Gw
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3Wf-Dn-xmr">
                                 <rect key="frame" x="72" y="13" width="76" height="32"/>
-                                <buttonCell key="cell" type="push" title="Stand" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="irS-VY-Z1f">
+                                <buttonCell key="cell" type="push" title="Stand" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="irS-VY-Z1f">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent">s</string>
@@ -671,7 +671,7 @@ Gw
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tac-iE-GmD">
                                 <rect key="frame" x="148" y="13" width="83" height="32"/>
-                                <buttonCell key="cell" type="push" title="Double" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ILs-Un-aoj">
+                                <buttonCell key="cell" type="push" title="Double" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ILs-Un-aoj">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent">d</string>
@@ -682,7 +682,7 @@ Gw
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4iV-PE-eKa">
                                 <rect key="frame" x="228" y="13" width="68" height="32"/>
-                                <buttonCell key="cell" type="push" title="Split" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FH4-gN-emf">
+                                <buttonCell key="cell" type="push" title="Split" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FH4-gN-emf">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent">v</string>
@@ -715,7 +715,7 @@ Gw
                             </customView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u8I-pZ-I3j">
                                 <rect key="frame" x="397" y="13" width="69" height="32"/>
-                                <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tuS-KR-wyv">
+                                <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tuS-KR-wyv">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent" base64-UTF8="YES">
@@ -728,7 +728,7 @@ IA
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HVM-mb-wev">
                                 <rect key="frame" x="296" y="13" width="101" height="32"/>
-                                <buttonCell key="cell" type="push" title="Surrender" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3tT-PR-xSi">
+                                <buttonCell key="cell" type="push" title="Surrender" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3tT-PR-xSi">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent">x</string>
@@ -851,6 +851,7 @@ IA
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="betButton" destination="GeC-gf-EWA" id="hMi-2M-AdK"/>
                         <outlet property="dealerHand" destination="1Th-E2-98d" id="wkz-bf-Due"/>
                         <outlet property="doubleButton" destination="Tac-iE-GmD" id="ROb-I6-gnc"/>
                         <outlet property="hitButton" destination="keQ-CN-OQX" id="7p5-3M-EEy"/>

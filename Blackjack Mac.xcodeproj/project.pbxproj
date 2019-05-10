@@ -15,12 +15,6 @@
 		71A01FAA22685FFA00D5AF46 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 71A01FA922685FF900D5AF46 /* Credits.rtf */; };
 		71FCEB14227AC72A00717E3F /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FCEB13227AC72A00717E3F /* CardView.m */; };
 		71FCEB18227B166F00717E3F /* libblackjack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FCEB17227B166F00717E3F /* libblackjack.a */; };
-		71FCEB8E227B233D00717E3F /* Card-Back-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FCEB1D227B233D00717E3F /* Card-Back-01.png */; };
-		71FCEB8F227B233D00717E3F /* Card-Back-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FCEB1E227B233D00717E3F /* Card-Back-02.png */; };
-		71FCEB90227B233D00717E3F /* Card-Back-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FCEB1F227B233D00717E3F /* Card-Back-03.png */; };
-		71FCEB91227B233D00717E3F /* Card-Back-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FCEB20227B233D00717E3F /* Card-Back-04.png */; };
-		71FCEB92227B233D00717E3F /* Card-Back-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FCEB21227B233D00717E3F /* Card-Back-05.png */; };
-		71FCEB93227B233D00717E3F /* Card-Back-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FCEB22227B233D00717E3F /* Card-Back-06.png */; };
 		71FCEB94227B233D00717E3F /* c01.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FCEB25227B233D00717E3F /* c01.png */; };
 		71FCEB95227B233D00717E3F /* c02.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FCEB26227B233D00717E3F /* c02.png */; };
 		71FCEB96227B233D00717E3F /* c03.png in Resources */ = {isa = PBXBuildFile; fileRef = 71FCEB27227B233D00717E3F /* c03.png */; };
@@ -418,7 +412,6 @@
 				71FCEBB5227B233D00717E3F /* h08.png in Resources */,
 				71FCEBBB227B233D00717E3F /* s01.png in Resources */,
 				71FCEBAB227B233D00717E3F /* d11.png in Resources */,
-				71FCEB90227B233D00717E3F /* Card-Back-03.png in Resources */,
 				71FCEBC5227B233D00717E3F /* s11.png in Resources */,
 				71FCEBC4227B233D00717E3F /* s10.png in Resources */,
 				71FCEBA0227B233D00717E3F /* c13.png in Resources */,
@@ -426,11 +419,9 @@
 				71FCEB95227B233D00717E3F /* c02.png in Resources */,
 				71FCEBBC227B233D00717E3F /* s02.png in Resources */,
 				71FCEBAD227B233D00717E3F /* d13.png in Resources */,
-				71FCEB8F227B233D00717E3F /* Card-Back-02.png in Resources */,
 				71FCEBA9227B233D00717E3F /* d09.png in Resources */,
 				71FCEB9E227B233D00717E3F /* c11.png in Resources */,
 				71FCEBAC227B233D00717E3F /* d12.png in Resources */,
-				71FCEB8E227B233D00717E3F /* Card-Back-01.png in Resources */,
 				71FCEBB2227B233D00717E3F /* h05.png in Resources */,
 				71FCEBB6227B233D00717E3F /* h09.png in Resources */,
 				71FCEB9D227B233D00717E3F /* c10.png in Resources */,
@@ -440,13 +431,10 @@
 				71FCEBB8227B233D00717E3F /* h11.png in Resources */,
 				71FCEBB1227B233D00717E3F /* h04.png in Resources */,
 				71FCEBA1227B233D00717E3F /* d01.png in Resources */,
-				71FCEB93227B233D00717E3F /* Card-Back-06.png in Resources */,
 				71FCEBC1227B233D00717E3F /* s07.png in Resources */,
-				71FCEB91227B233D00717E3F /* Card-Back-04.png in Resources */,
 				71FCEB9F227B233D00717E3F /* c12.png in Resources */,
 				71FCEB97227B233D00717E3F /* c04.png in Resources */,
 				71A01F9A22684E3500D5AF46 /* Main.storyboard in Resources */,
-				71FCEB92227B233D00717E3F /* Card-Back-05.png in Resources */,
 				71FCEB99227B233D00717E3F /* c06.png in Resources */,
 				71FCEBAA227B233D00717E3F /* d10.png in Resources */,
 			);

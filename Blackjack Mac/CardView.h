@@ -26,9 +26,11 @@
 @interface CardView : NSView
 
 @property (assign, readonly) BOOL isDealerHand;
+@property (assign) BOOL noGameInProgress;
 
 @property (assign) Player* player;
 
 - (NSImage*)cardToImage:(unsigned int)cardNo;
+- (void)drawNewGameHint;
 
 @end

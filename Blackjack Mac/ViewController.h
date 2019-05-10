@@ -37,6 +37,7 @@
 @property (weak) IBOutlet NSButton *splitButton;
 @property (weak) IBOutlet NSButton *surrenderButton;
 @property (weak) IBOutlet NSButton *nextButton;
+@property (weak) IBOutlet NSButton *betButton;
 
 @property (assign) Deck* deck;
 @property (assign) Player** players;

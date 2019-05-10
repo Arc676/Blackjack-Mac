@@ -23,9 +23,19 @@
 
 @implementation CardView
 
+- (void)drawNewGameHint {
+	self.noGameInProgress = YES;
+	[self setNeedsDisplay:YES];
+}
+
 - (void)drawRect:(NSRect)rect {
 	[[NSColor whiteColor] set];
 	NSRectFill(rect);
+	if (self.noGameInProgress) {
+		[@"No game in progress.\nClick File > New Game or Command+N to configure your table" drawAtPoint:NSMakePoint(10, 60) withAttributes:nil];
+		self.noGameInProgress = NO;
+		return;
+	}
 	if (!self.player) {
 		return;
 	}

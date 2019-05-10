@@ -32,7 +32,7 @@
 	char* dealerName = malloc(7);
 	sprintf(dealerName, "Dealer");
 	self.dealer = player_new(dealerName, 1, -1);
-	[self setTurnActive:NO];
+	[self.dealerHand drawNewGameHint];
 }
 
 - (void)setTurnActive:(BOOL)active {
@@ -71,11 +71,27 @@
 		sprintf(name, "%s", [names[i] cStringUsingEncoding:NSUTF8StringEncoding]);
 		self.players[i] = player_new(name, 0, [balances[i] intValue]);
 	}
+
 	[self.playerName setStringValue:names[0]];
 	[self.playerTable reloadData];
+	[self.dealerHand setNeedsDisplay:YES];
+
+	self.playerHand.player = NULL;
+	[self.playerHand setNeedsDisplay:YES];
+
+	[self setTurnActive:NO];
+	[self.betButton setEnabled:YES];
 }
 
 - (IBAction)beginTurn:(id)sender {
+	int wager = [self.playerWager intValue];
+	Player* player = self.players[self.currentPlayer];
+	if (wager <= 0 || wager > player_getBalance(player)) {
+		[self.playerWager setStringValue:@""];
+		return;
+	}
+	[self.betButton setEnabled:NO];
+
 	if (self.currentPlayer == 0) {
 		player_gameOver(self.dealer, 0);
 		player_bet(self.dealer, 0, self.deck);
@@ -84,8 +100,6 @@
 	self.dealerHand.player = NULL;
 	[self.dealerHand setNeedsDisplay:YES];
 
-	int wager = [self.playerWager intValue];
-	Player* player = self.players[self.currentPlayer];
 	player_bet(player, wager, self.deck);
 	self.playerHand.player = player;
 	[self.playerHand setNeedsDisplay:YES];
@@ -118,11 +132,11 @@
 	} else {
 		self.playerHand.player = NULL;
 		[self.playerHand setNeedsDisplay:YES];
-		[self setTurnActive:YES];
 	}
 	char* name = player_getName(self.players[self.currentPlayer]);
 	[self.playerName setStringValue:[NSString stringWithUTF8String:name]];
 	rust_freestr(name);
+	[self.betButton setEnabled:YES];
 }
 
 - (IBAction)playerHit:(id)sender {
